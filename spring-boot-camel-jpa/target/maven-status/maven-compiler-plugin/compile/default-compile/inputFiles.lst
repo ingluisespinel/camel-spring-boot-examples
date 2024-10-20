@@ -1,0 +1,5 @@
+/home/luis/Development/Apache Camel/FormadoresIT/spring-boot-camel-jpa/src/main/java/com/formadoresit/camel/domain/UserRepository.java
+/home/luis/Development/Apache Camel/FormadoresIT/spring-boot-camel-jpa/src/main/java/com/formadoresit/camel/domain/User.java
+/home/luis/Development/Apache Camel/FormadoresIT/spring-boot-camel-jpa/src/main/java/com/formadoresit/camel/MySpringBootApplication.java
+/home/luis/Development/Apache Camel/FormadoresIT/spring-boot-camel-jpa/src/main/java/com/formadoresit/camel/routes/UsersRoutes.java
+/home/luis/Development/Apache Camel/FormadoresIT/spring-boot-camel-jpa/src/main/java/com/formadoresit/camel/config/MySpringBean.java

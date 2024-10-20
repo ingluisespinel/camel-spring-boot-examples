@@ -1,0 +1,5 @@
+com/formadoresit/camel/routes/UsersRoutes.class
+com/formadoresit/camel/config/MySpringBean.class
+com/formadoresit/camel/domain/User.class
+com/formadoresit/camel/domain/UserRepository.class
+com/formadoresit/camel/MySpringBootApplication.class
