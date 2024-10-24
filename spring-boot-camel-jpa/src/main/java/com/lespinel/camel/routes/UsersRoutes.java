@@ -24,7 +24,6 @@ public class UsersRoutes extends RouteBuilder {
 
     @Override
     public void configure() {
-        /*
         from("timer:mainTimer?period={{timer.period}}")
                 .routeId("timer-query-users")
                 .choice()
@@ -38,7 +37,6 @@ public class UsersRoutes extends RouteBuilder {
                             .log("queryType not supported")
                 .end()
                 .log("Total results: ${body.size}");
-         */
 
         from("direct:getUsersByRepository")
                 .routeId("users-from-repo")
