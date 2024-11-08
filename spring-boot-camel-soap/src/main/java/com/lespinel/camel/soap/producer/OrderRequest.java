@@ -1,4 +1,4 @@
-package com.lespinel.camel.soap;
+package com.lespinel.camel.soap.producer;
 
 import lombok.*;
 

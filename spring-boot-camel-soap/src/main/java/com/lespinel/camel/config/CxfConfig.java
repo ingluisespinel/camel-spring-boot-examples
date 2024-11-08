@@ -1,6 +1,6 @@
 package com.lespinel.camel.config;
 
-import com.lespinel.camel.soap.OrdersService;
+import com.lespinel.camel.soap.producer.OrdersService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.camel.component.cxf.common.DataFormat;
 import org.apache.camel.component.cxf.jaxws.CxfEndpoint;
