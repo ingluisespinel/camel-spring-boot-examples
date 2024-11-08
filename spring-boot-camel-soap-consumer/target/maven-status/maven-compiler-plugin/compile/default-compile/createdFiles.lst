@@ -1,0 +1,12 @@
+com/lespinel/camel/soap/producer/ObjectFactory.class
+com/lespinel/camel/soap/consumer/MySpringBootApplication.class
+com/lespinel/camel/soap/producer/QueryOrderResponse.class
+com/lespinel/camel/soap/producer/package-info.class
+com/lespinel/camel/soap/producer/CreateOrderResponse.class
+com/lespinel/camel/soap/producer/CreateOrder.class
+com/lespinel/camel/soap/producer/OrdersServiceService.class
+com/lespinel/camel/soap/producer/OrdersService.class
+com/lespinel/camel/soap/consumer/routes/SoapConsumerRouter.class
+com/lespinel/camel/soap/producer/OrderRequest.class
+com/lespinel/camel/soap/producer/QueryOrder.class
+com/lespinel/camel/soap/producer/OrderResponse.class

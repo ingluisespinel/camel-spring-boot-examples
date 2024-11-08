@@ -1,0 +1,91 @@
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://producer.soap.camel.lespinel.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="OrdersServiceService" targetNamespace="http://producer.soap.camel.lespinel.com/">
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://producer.soap.camel.lespinel.com/" elementFormDefault="unqualified" targetNamespace="http://producer.soap.camel.lespinel.com/" version="1.0">
+            <xs:element name="createOrder" type="tns:createOrder"/>
+            <xs:element name="createOrderResponse" type="tns:createOrderResponse"/>
+            <xs:element name="orderResponse" type="tns:orderResponse"/>
+            <xs:element name="queryOrder" type="tns:queryOrder"/>
+            <xs:element name="queryOrderResponse" type="tns:queryOrderResponse"/>
+            <xs:complexType name="createOrder">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="tns:orderRequest"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="orderRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="id" type="xs:string"/>
+                    <xs:element minOccurs="0" name="owner" type="xs:string"/>
+                    <xs:element name="total" type="xs:double"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="createOrderResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="queryOrder">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="queryOrderResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="tns:orderResponse"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="orderResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="id" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="queryOrderResponse">
+        <wsdl:part element="tns:queryOrderResponse" name="parameters"> </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="createOrderResponse">
+        <wsdl:part element="tns:createOrderResponse" name="parameters"> </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="createOrder">
+        <wsdl:part element="tns:createOrder" name="parameters"> </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="queryOrder">
+        <wsdl:part element="tns:queryOrder" name="parameters"> </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="OrdersService">
+        <wsdl:operation name="createOrder">
+            <wsdl:input message="tns:createOrder" name="createOrder"> </wsdl:input>
+            <wsdl:output message="tns:createOrderResponse" name="createOrderResponse"> </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="queryOrder">
+            <wsdl:input message="tns:queryOrder" name="queryOrder"> </wsdl:input>
+            <wsdl:output message="tns:queryOrderResponse" name="queryOrderResponse"> </wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="OrdersServiceServiceSoapBinding" type="tns:OrdersService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="createOrder">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="createOrder">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="createOrderResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="queryOrder">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="queryOrder">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="queryOrderResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="OrdersServiceService">
+        <wsdl:port binding="tns:OrdersServiceServiceSoapBinding" name="OrdersServicePort">
+            <soap:address location="http://127.0.0.1:8080/services/ws/soap"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

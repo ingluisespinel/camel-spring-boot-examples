@@ -1,0 +1,12 @@
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap-consumer/target/generated-sources/cxf/com/lespinel/camel/soap/producer/QueryOrder.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap-consumer/target/generated-sources/cxf/com/lespinel/camel/soap/producer/OrdersService.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap-consumer/target/generated-sources/cxf/com/lespinel/camel/soap/producer/ObjectFactory.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap-consumer/target/generated-sources/cxf/com/lespinel/camel/soap/producer/CreateOrder.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap-consumer/src/main/java/com/lespinel/camel/soap/consumer/routes/SoapConsumerRouter.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap-consumer/target/generated-sources/cxf/com/lespinel/camel/soap/producer/OrdersServiceService.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap-consumer/target/generated-sources/cxf/com/lespinel/camel/soap/producer/OrderResponse.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap-consumer/target/generated-sources/cxf/com/lespinel/camel/soap/producer/OrderRequest.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap-consumer/src/main/java/com/lespinel/camel/soap/consumer/MySpringBootApplication.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap-consumer/target/generated-sources/cxf/com/lespinel/camel/soap/producer/CreateOrderResponse.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap-consumer/target/generated-sources/cxf/com/lespinel/camel/soap/producer/QueryOrderResponse.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap-consumer/target/generated-sources/cxf/com/lespinel/camel/soap/producer/package-info.java

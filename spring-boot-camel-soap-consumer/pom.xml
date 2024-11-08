@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.lespinel.camel</groupId>
-  <artifactId>spring-boot-camel-soap</artifactId>
+  <artifactId>spring-boot-camel-soap-consumer</artifactId>
   <packaging>jar</packaging>
   <version>1.0</version>
 
-  <name>A Camel Spring Boot Project showing how to expose SOAP APIs</name>
+  <name>A Camel Spring Boot Project showing how consuming SOAP APIs</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -61,12 +61,10 @@
       <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web-services -->
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web-services</artifactId>
+      <groupId>org.apache.camel.springboot</groupId>
+      <artifactId>camel-cxf-soap-starter</artifactId>
     </dependency>
-
 
     <!-- Camel -->
     <dependency>
@@ -76,18 +74,6 @@
     <dependency>
       <groupId>org.apache.camel.springboot</groupId>
       <artifactId>camel-stream-starter</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.camel.springboot</groupId>
-      <artifactId>camel-cxf-soap-starter</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>1.18.34</version>
-      <scope>provided</scope>
     </dependency>
 
     <!-- Test -->
@@ -130,6 +116,30 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>${surefire.plugin.version}</version>
       </plugin>
+
+      <plugin>
+        <groupId>org.apache.cxf</groupId>
+        <artifactId>cxf-codegen-plugin</artifactId>
+        <version>4.0.1</version>
+        <executions>
+          <execution>
+            <id>generate-sources</id>
+            <phase>generate-sources</phase>
+            <configuration>
+              <sourceRoot>${project.build.directory}/generated-sources/cxf</sourceRoot>
+              <wsdlOptions>
+                <wsdlOption>
+                  <wsdl>${basedir}/src/main/resources/myService.wsdl</wsdl>
+                </wsdlOption>
+              </wsdlOptions>
+            </configuration>
+            <goals>
+              <goal>wsdl2java</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
     </plugins>
   </build>
 
