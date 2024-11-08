@@ -2,12 +2,14 @@ package com.lespinel.camel.routes.rest;
 
 import com.lespinel.camel.domain.Order;
 import com.lespinel.camel.processors.InputDataErrorProcessor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.camel.Exchange;
 import org.apache.camel.ValidationException;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.rest.RestBindingMode;
 import org.springframework.stereotype.Component;
 
+@Slf4j
 @Component
 public class RestRouter extends RouteBuilder {
 
@@ -41,10 +43,12 @@ public class RestRouter extends RouteBuilder {
                     .to("direct:createNewOrder");
 
         from("direct:getAllOrders")
+                .routeId("process-get-all-orders")
                 .bean("fakeOrderRepoImp", "getAll")
                 .log("Body: ${body}");
 
         from("direct:getOrderById")
+                .routeId("process-get-order-by-id")
                 .log("Processing new request with headers ${headers}")
                 .bean("fakeOrderRepoImp", "getById(${headers.id})")
                 .choice()
@@ -53,6 +57,7 @@ public class RestRouter extends RouteBuilder {
                 .end();
 
         from("direct:createNewOrder")
+                .routeId("process-new-order")
                 .doTry()
                     .log("Creating new Order")
                     .to("bean-validator:validateOrder")

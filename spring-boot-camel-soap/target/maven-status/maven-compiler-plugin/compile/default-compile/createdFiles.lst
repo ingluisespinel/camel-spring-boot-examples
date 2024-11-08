@@ -1,0 +1,11 @@
+com/lespinel/camel/soap/OrderRequest.class
+com/lespinel/camel/soap/OrderRequest$OrderRequestBuilder.class
+com/lespinel/camel/routes/MySpringBootRouter.class
+com/lespinel/camel/soap/OrderResponse.class
+com/lespinel/camel/soap/OrdersServiceImp.class
+com/lespinel/camel/soap/ListOrders$ListOrdersBuilder.class
+com/lespinel/camel/config/CxfConfig.class
+com/lespinel/camel/MySpringBootApplication.class
+com/lespinel/camel/soap/ListOrders.class
+com/lespinel/camel/soap/OrdersService.class
+com/lespinel/camel/soap/OrderResponse$OrderResponseBuilder.class

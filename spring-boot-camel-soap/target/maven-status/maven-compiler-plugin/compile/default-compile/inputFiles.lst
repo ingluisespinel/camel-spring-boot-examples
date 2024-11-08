@@ -1,0 +1,8 @@
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap/src/main/java/com/lespinel/camel/routes/MySpringBootRouter.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap/src/main/java/com/lespinel/camel/config/CxfConfig.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap/src/main/java/com/lespinel/camel/soap/OrderResponse.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap/src/main/java/com/lespinel/camel/soap/OrdersServiceImp.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap/src/main/java/com/lespinel/camel/soap/ListOrders.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap/src/main/java/com/lespinel/camel/soap/OrderRequest.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap/src/main/java/com/lespinel/camel/soap/OrdersService.java
+/home/luis/Development/Apache Camel/FormadoresIT/camel-spring-boot-examples/spring-boot-camel-soap/src/main/java/com/lespinel/camel/MySpringBootApplication.java

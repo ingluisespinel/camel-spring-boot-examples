@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.lespinel.camel</groupId>
-  <artifactId>spring-boot-camel-rest</artifactId>
+  <artifactId>spring-boot-camel-soap</artifactId>
   <packaging>jar</packaging>
   <version>1.0</version>
 
-  <name>A Camel Spring Boot REST DSL Project</name>
+  <name>A Camel Spring Boot Route</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -41,6 +41,7 @@
 
   <dependencies>
 
+    <!-- Spring Boot -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
@@ -51,16 +52,21 @@
         </exclusion>
       </exclusions>
     </dependency>
-
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-undertow</artifactId>
     </dependency>
-
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web-services -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web-services</artifactId>
+    </dependency>
+
 
     <!-- Camel -->
     <dependency>
@@ -70,6 +76,18 @@
     <dependency>
       <groupId>org.apache.camel.springboot</groupId>
       <artifactId>camel-stream-starter</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.camel.springboot</groupId>
+      <artifactId>camel-cxf-soap-starter</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.34</version>
+      <scope>provided</scope>
     </dependency>
 
     <!-- Test -->
@@ -83,44 +101,6 @@
       <artifactId>camel-test-spring-junit5</artifactId>
       <scope>test</scope>
     </dependency>
-
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>1.18.34</version>
-      <scope>provided</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.camel.springboot</groupId>
-      <artifactId>camel-servlet-starter</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.camel.springboot</groupId>
-      <artifactId>camel-rest-starter</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.camel.springboot</groupId>
-      <artifactId>camel-openapi-java-starter</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.camel.springboot</groupId>
-      <artifactId>camel-jackson-starter</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.camel.springboot</groupId>
-      <artifactId>camel-bean-validator-starter</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.camel.springboot</groupId>
-      <artifactId>camel-http-starter</artifactId>
-    </dependency>
-
   </dependencies>
 
   <build>
