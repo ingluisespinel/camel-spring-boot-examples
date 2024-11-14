@@ -1,0 +1,3 @@
+com/formadoresit/camel/routes/OrdersRouter.class
+com/formadoresit/camel/MySpringBootApplication.class
+com/formadoresit/camel/services/OrdersService.class
